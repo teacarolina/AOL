@@ -5,6 +5,9 @@
 </div>
 <div class="row">
     <div class="col-sm-12">
+        @if(session()->has('weak')) 
+        <p>{{ session('weak') }}<p>
+            @endif
         <h1 class="display-3">Users</h1>
         <table class="table table-striped">
             <thead>

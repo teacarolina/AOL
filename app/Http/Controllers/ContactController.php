@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
-//use App\Contact;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
@@ -44,7 +43,7 @@ class ContactController extends Controller
         //
         $request->validate([
             'email'=>'required|email|unique:contacts,email',
-            'password'=>'required|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$/'
+            'password'=>'required|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/'
 
         ]);
 
@@ -54,8 +53,22 @@ class ContactController extends Controller
         ]);
 
         /* Trying to create message for password strength bar 
+        Want to use something similar to flash but should appear when user types
         if(Str::length($contact['password']) < 8) {
         session()->flash('weak', 'It must be at least eight characters long.');
+        } 
+
+        $uppercase = preg_match('@[A-Z]@', $contact['password']);
+        $lowercase = preg_match('@[a-z]@', $contact['password']);
+        $number = preg_match('@[0-9]@', $contact['password']);
+        if($uppercase && $lowercase && $number) {
+            session()->flash('medium', 'It must contain one uppercase letter, one lowercase letter
+            and a digit.');
+        }
+
+        $specialChar = preg_match('@[^\w]@', $contact['password']);
+        if($specialChar) {
+            session()->flash('strong', 'and/or symbols.');
         } */
 
         $contact->save();
@@ -99,7 +112,7 @@ class ContactController extends Controller
         $request->validate([
             //To update email
             //'email'=>'required|email|unique:contacts,email',
-            'password'=>'required|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$/'
+            'password'=>'required|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/'
         ]);
 
         $contact = Contact::find($id);
