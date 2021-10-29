@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 //use App\Contact;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class ContactController extends Controller
 {
@@ -42,22 +43,20 @@ class ContactController extends Controller
     {
         //
         $request->validate([
-            //'first_name'=>'required',
-            //'last_name'=>'required',
             'email'=>'required|email|unique:contacts,email',
             'password'=>'required|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$/'
 
         ]);
 
         $contact = new Contact([
-            //'first_name' => $request->get('first_name'),
-            //'last_name' => $request->get('last_name'),
             'email' => $request->get('email'),
-            //'job_title' => $request->get('job_title'),
-            //'city' => $request->get('city'),
-            //'country' => $request->get('country')
             'password' => Hash::make($request->get('password'))
         ]);
+
+        /* Trying to create message for password strength bar 
+        if(Str::length($contact['password']) < 8) {
+        session()->flash('weak', 'It must be at least eight characters long.');
+        } */
 
         $contact->save();
         return redirect('/contacts')->with('success', 'Contact saved!');
@@ -98,20 +97,17 @@ class ContactController extends Controller
     {
         //
         $request->validate([
-            'first_name'=>'required',
-            'last_name'=>'required',
-            'email'=>'required',
+            //To update email
+            //'email'=>'required|email|unique:contacts,email',
+            'password'=>'required|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$/'
         ]);
 
         $contact = Contact::find($id);
-        $contact->first_name = $request->get('first_name');
-        $contact->last_name = $request->get('last_name');
-        $contact->email = $request->get('email');
-        $contact->job_title = $request->get('job_title');
-        $contact->city = $request->get('city');
-        $contact->country = $request->get('country');
+        //$contact->email = $request->get('email');
+        $contact->password = Hash::make($request->get('password'));
         $contact->save();
         return redirect('/contacts')->with('success', 'Contact Updated');
+
     }
 
     /**

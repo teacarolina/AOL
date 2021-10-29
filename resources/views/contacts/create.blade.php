@@ -18,35 +18,14 @@
             @endif
             <form method="post" action="{{ route('contacts.store') }}">
                 @csrf
-                <!-- <div class="form-group">
-                    <label for="first_name">First Name</label>
-                    <input type="text" class="form-control" name="first_name"/>
-                </div>
-                <div class="form-group">
-                    <label for="last_name">Last Name</label>
-                    <input type="text" class="form-control" name="last_name"/>
-                </div> -->
                 <div class="form-group">
                     <label for="email">E-MAIL*</label>
                     <input type="text" class="form-control" name="email"/>
                 </div>
-                <!-- <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="text" class="form-control" name="city"/>
-                </div>
-                <div class="form-group">
-                    <label for="country">Country</label>
-                    <input type="text" class="form-control" name="country"/>
-                </div>
-                <div class="form-group">
-                    <label for="job_title">Job Title</label>
-                    <input type="text" class="form-control" name="job_title"/>
-                </div> -->
                 <div class="form-group">
                     <label for="password">CHOOSE PASSWORD*</label>
                     <input type="password" class="form-control" name="password"/>
                 </div>
-            
                 <div class="form-group">
                     <label for="password_confirmation">REPEAT PASSWORD*</label>
                     <input type="password" class="form-control" name="password_confirmation"/>

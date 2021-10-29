@@ -10,12 +10,7 @@
             <thead>
                 <tr>
                     <td>ID</td>
-                    <!-- <td>First Name</td>
-                    <td>Last Name</td> -->
                     <td>Email</td>
-                    <!-- <td>Job Title</td>
-                    <td>City</td>
-                    <td>Country</td> -->
                     <td colspan=2>Actions</td>
                 </tr>
             </thead>
@@ -23,12 +18,7 @@
                 @foreach($contacts as $contact)
                 <tr>
                     <td>{{ $contact->id }}</td>
-                   <!--  <td>{{ $contact->first_name }}</td>  
-                    <td>{{ $contact->last_name }}</td>  -->
                     <td>{{ $contact->email }}</td> 
-                   <!--  <td>{{ $contact->job_title }}</td> 
-                    <td>{{ $contact->city }}</td> 
-                    <td>{{ $contact->country }}</td>  -->
                     <td><a href="{{ route('contacts.edit', $contact->id) }}" class="btn btn-primary">
                         Edit</a>
                     </td>
