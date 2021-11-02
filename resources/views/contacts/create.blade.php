@@ -3,7 +3,7 @@
 
 <div class="container">
 <div class="row">
-    <div class="col-6">
+    <div class="col-sm">
         <h1 style="font-family: 'Georgia', sans-serif; color: #333333;" class="display-10 text-center">Welcome to Wedsly</h1>
         <!--<h3 class="display-10">Already a member?</h3>-->
         <h6 style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333;" class="display-10 text-center">Already a member? <b>Log in</b> or <b>Merge accounts</b></h6>
@@ -64,8 +64,7 @@
                 </div>
             </div>
         </div>
-       <!--Not responsive design on carousel-->
-        <div class="col-6">
+        <div class="col-sm">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -75,6 +74,9 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="/images/bridal-bouquet.jpg" alt="First slide">
+     <!--  <div class="carousel-caption d-none d-md-block">
+    <h1>A few clicks away from planning your dream wedding!</h1>
+  </div> -->
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="/images/couple.jpg" alt="Second slide">
@@ -92,7 +94,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
 </div>
     </div>
+
 </div>
+
 @endsection
