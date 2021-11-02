@@ -1,8 +1,9 @@
 @extends('base')
 @section('main')
 
+<div class="container">
 <div class="row">
-    <div class="col-sm-8 offset-sm-2">
+    <div class="col-6">
         <h1 style="font-family: 'Georgia', sans-serif; color: #333333;" class="display-10 text-center">Welcome to Wedsly</h1>
         <!--<h3 class="display-10">Already a member?</h3>-->
         <h6 style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333;" class="display-10 text-center">Already a member? <b>Log in</b> or <b>Merge accounts</b></h6>
@@ -63,6 +64,35 @@
                 </div>
             </div>
         </div>
+       <!--Not responsive design on carousel-->
+        <div class="col-6">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="/images/bridal-bouquet.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/images/couple.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/images/sunset.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
     </div>
 </div>
 @endsection
