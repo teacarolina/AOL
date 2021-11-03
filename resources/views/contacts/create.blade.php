@@ -6,7 +6,8 @@
     <div class="col-sm">
         <h1 style="font-family: 'Georgia', sans-serif; color: #333333;" class="display-10 text-center pt-4">Welcome to Wedsly</h1>
         <!--<h3 class="display-10">Already a member?</h3>-->
-        <h6 style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333;" class="display-10 text-center">Already a member? <b>Log in</b> or <b>Merge accounts</b></h6>
+        <div style="height: 1px; background-color: black; width: 250px;" class="col-md-6 offset-md-3 mt-3"></div>
+        <h6 style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333;" class="display-10 text-center mt-3">Already a member? <b>Log in</b> or <b>Merge accounts</b></h6>
         <div>
             @if($errors->any())
             <div class="alert alert-danger">
@@ -20,19 +21,21 @@
             <form method="post" action="{{ route('contacts.store') }}">
                 @csrf
                 <div class="form-group pt-4">
-                    <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 10px;" for="email">E-MAIL*</label>
+                    <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 10px;" for="email" class="ml-4">E-MAIL*</label>
                     <input type="text" class="form-control" name="email"/>
                 </div>
                 <div class="row">
                 <div class="col">
                 <div class="form-group">
-                    <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 10px;" for="password">CHOOSE PASSWORD*</label>
-                    <input type="password" class="form-control" name="password"/>
-                </div>
+                    <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 10px;" for="password" class="ml-4">CHOOSE PASSWORD*</label>
+                    <input type="password" class="form-control" id="passwordCheck" name="password"/>
+                    <span id="strengthBar" class="badge displayBadge">Strength Bar</span>
+                    <!-- <div id="progress" class="progress"></div> -->
+                  </div>
                 </div>
                 <div class="col">
                 <div class="form-group">
-                    <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 10px;" for="password_confirmation">REPEAT PASSWORD*</label>
+                    <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 10px;" for="password_confirmation" class="ml-4">REPEAT PASSWORD*</label>
                     <input type="password" class="form-control" name="password_confirmation"/>
                 </div>
                 </div>
