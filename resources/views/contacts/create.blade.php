@@ -20,7 +20,7 @@
             @endif
             <form method="post" action="{{ route('contacts.store') }}">
                 @csrf
-                <div class="form-group pt-4">
+                <div class="form-group pt-2">
                     <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 10px;" for="email" class="ml-4">E-MAIL*</label>
                     <input type="text" class="form-control" name="email"/>
                 </div>
@@ -29,8 +29,8 @@
                 <div class="form-group">
                     <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 10px;" for="password" class="ml-4">CHOOSE PASSWORD*</label>
                     <input type="password" class="form-control" id="passwordCheck" name="password"/>
-                    <span id="strengthBar" class="badge displayBadge">Strength Bar</span>
-                    <!-- <div id="progress" class="progress"></div> -->
+                    <div id="progress" class="progress" style="height: 4px; margin-top: 10px;"></div>
+                    <span id="strengthBar" class="badge displayBadge"></span>
                   </div>
                 </div>
                 <div class="col">
@@ -40,11 +40,14 @@
                 </div>
                 </div>
                 </div>
+                <span id="strengthInfo" class="badge displayBadge">The password has to be at least
+                  eight characters and include capital - and lower case<!--letters, numbers
+                and/or symbols--></span>
                 <div class="form-group form-check-inline pt-4">
                 <input type="checkbox" class="form-check-input" name="terms" value="yes" required/>
                 <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 12px;" for="terms" class="form-check-label">I accept that Wedsly will store and process my information</label>
                 </div>
-                <div class="form-group pt-4">
+                <div class="form-group pt-1">
                 <button style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #fbf8f8;" type="submit" class="btn btn-secondary btn-lg btn-block">CREATE FREE ACCOUNT</button>
                 </div>
             </form>
