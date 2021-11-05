@@ -46,12 +46,18 @@
                 <div class="form-group form-check-inline pt-4">
                 <input type="checkbox" class="form-check-input" name="terms" value="yes" required/>
                 <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 12px;" for="terms" class="form-check-label">I accept that Wedsly will store and process my information</label>
-                </div>
+              
+              </div>
+    <!--  working on round checkbox       
+         <label class="containerCheck">One
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label> -->
                 <div class="form-group pt-1">
                 <button style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #fbf8f8;" type="submit" class="btn btn-secondary btn-lg btn-block">CREATE FREE ACCOUNT</button>
                 </div>
             </form>
-            <h6 style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333;" class="display-10 text-center pt-2">OR SIGN IN WITH</h6>
+            <h6 id="lines" style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333;" class="display-10 text-center pt-2">OR SIGN IN WITH</h6>
             <div class="row pt-2">
                 <div class="col">
                 <div class="form-group">

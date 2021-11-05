@@ -28,13 +28,15 @@ function checkPasswordStrength(PasswordParameter) {
 
 password.addEventListener("input", ()=> {
     /*strengthBar.style.display = 'block';
+    
      testing.innerHTML = '<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>';*/
     clearTimeout(timeout);
     timeout = setTimeout(()=> checkPasswordStrength(password.value), 300);
     if(password.value.length !== 0) {
         /*strengthBar.style.display != 'block';*/
+        
     } else {
-        /*strengthBar.style.display = 'none';*/
+       /* strengthBar.style.display = 'none';*/
     } 
 });
 
