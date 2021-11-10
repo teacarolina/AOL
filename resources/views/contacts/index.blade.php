@@ -86,15 +86,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vero blanditiis d
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-   <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
   </ol>
   <div class="carousel-inner h-100">
-    <!--<div class="carousel-item active">
-      <img class="d-block w-100" src="/images/bridal-bouquet.jpg" alt="First slide">
-       <div class="carousel-caption d-none d-md-block">
-    <h1>A few clicks away from planning your dream wedding!</h1>
-  </div> 
-    </div>-->
     <div class="carousel-item active">
     <div class="carousel-caption d-none d-md-block h-100 text-right">
     <img style="width: 70px; height:70px;" src="/images/Com@1x.svg" alt="wedsly icon" class="icon">
@@ -130,7 +123,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vero blanditiis d
 </div>
 
 
-<!--Success messages-->
+<!--Success messages,
+do I need this?-->
     <div class="col-sm-12">
         @if(session()->get('success'))
         <div class="alert alert-success">

@@ -5,7 +5,6 @@
 <div class="row">
     <div class="col-sm">
         <h1 style="font-family: 'Georgia', sans-serif; color: #333333;" class="display-10 text-center pt-4">Welcome to Wedsly</h1>
-        <!--<h3 class="display-10">Already a member?</h3>-->
         <div style="height: 1px; background-color: black; width: 250px;" class="col-md-6 offset-md-3 mt-3"></div>
         <h6 style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333;" class="display-10 text-center mt-3">Already a member? <b>Log in</b> or <b>Merge accounts</b></h6>
         <div>
@@ -81,15 +80,8 @@
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-   <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
   </ol>
   <div class="carousel-inner h-100">
-    <!--<div class="carousel-item active">
-      <img class="d-block w-100" src="/images/bridal-bouquet.jpg" alt="First slide">
-       <div class="carousel-caption d-none d-md-block">
-    <h1>A few clicks away from planning your dream wedding!</h1>
-  </div> 
-    </div>-->
     <div class="carousel-item active">
     <div class="carousel-caption d-none d-md-block h-100 text-right">
     <img style="width: 70px; height:70px;" src="/images/Com@1x.svg" alt="wedsly icon" class="icon">

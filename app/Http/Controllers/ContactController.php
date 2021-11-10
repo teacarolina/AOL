@@ -52,25 +52,6 @@ class ContactController extends Controller
             'password' => Hash::make($request->get('password'))
         ]);
 
-        /* Trying to create message for password strength bar 
-        Want to use something similar to flash but should appear when user types
-        if(Str::length($contact['password']) < 8) {
-        session()->flash('weak', 'It must be at least eight characters long.');
-        } 
-
-        $uppercase = preg_match('@[A-Z]@', $contact['password']);
-        $lowercase = preg_match('@[a-z]@', $contact['password']);
-        $number = preg_match('@[0-9]@', $contact['password']);
-        if($uppercase && $lowercase && $number) {
-            session()->flash('medium', 'It must contain one uppercase letter, one lowercase letter
-            and a digit.');
-        }
-
-        $specialChar = preg_match('@[^\w]@', $contact['password']);
-        if($specialChar) {
-            session()->flash('strong', 'and/or symbols.');
-        } */
-
         $contact->save();
         return redirect('/contacts')->with('success', 'Contact saved!');
     }

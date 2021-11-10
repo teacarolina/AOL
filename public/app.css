@@ -38,7 +38,8 @@
     
   }
   
-  /* Hide the browser's default checkbox */
+  /* CSS to use to round checkbox? 
+  Hide the browser's default checkbox */
   .containerCheck input {
     position: absolute;
     opacity: 0;
