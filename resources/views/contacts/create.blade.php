@@ -39,11 +39,10 @@
                 </div>
                 </div>
                 </div>
-                <span id="strengthInfo" class="badge displayBadge">The password has to be at least
-                  eight characters and include capital - and lower case<!--letters, numbers
-                and/or symbols--></span>
+                <span id="strengthInfo" class="text-justify">The password has to be at least
+                  eight characters and include capital - and lower case letters, numbers and/or symbols</span>
                 <div class="form-group form-check-inline pt-4">
-                <input type="checkbox" class="form-check-input" name="terms" value="yes" required/>
+                <input id="checkbox" type="checkbox" class="form-check-input" name="terms" value="yes" required/>
                 <label style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333; font-size: 12px;" for="terms" class="form-check-label">I accept that Wedsly will store and process my information</label>
               
               </div>

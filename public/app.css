@@ -24,6 +24,37 @@
     position: absolute;
 }
 
+#strengthInfo {
+  font-size: 0.8rem;
+}
+
+#checkbox {
+  position: relative;
+}
+
+#checkbox::before {
+    content: "";
+    display: block;
+    width: 520px;
+    height: 1px;
+    background: black;
+    left: 1%;
+    bottom: 190%;
+    position: absolute;
+}
+
+#checkbox::after {
+    content: "";
+    display: block;
+    width: 520px;
+    height: 1px;
+    background: black;
+    left: 10%;
+    top: 187%;
+    position: absolute;
+}
+
+/* CSS to use to round checkbox? */
 .containerCheck {
     display: block;
     position: relative;
@@ -38,8 +69,7 @@
     
   }
   
-  /* CSS to use to round checkbox? 
-  Hide the browser's default checkbox */
+  /* Hide the browser's default checkbox */
   .containerCheck input {
     position: absolute;
     opacity: 0;
