@@ -1,53 +1,10 @@
 @extends('base')
 @section('main')
-<!-- 
-    
-old button to direct to create page
-<div>
-    <a style="margin: 19px;" href="{{ route('contacts.create') }}" class="btn btn-primary">New user</a>
-</div> -->
-
-<!-- old design with edit/delete functionallity 
-    <div class="row">
-    <div class="col-sm-12">
-        @if(session()->has('weak')) 
-        <p>{{ session('weak') }}<p>
-            @endif
-        <h1 class="display-3">Users</h1>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <td>ID</td>
-                    <td>Email</td>
-                    <td colspan=2>Actions</td>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($contacts as $contact)
-                <tr>
-                    <td>{{ $contact->id }}</td>
-                    <td>{{ $contact->email }}</td> 
-                    <td><a href="{{ route('contacts.edit', $contact->id) }}" class="btn btn-primary">
-                        Edit</a>
-                    </td>
-                    <td><form action="{{ route('contacts.destroy', $contact->id) }}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger" type="submit">Delete</button>
-                        </form>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div> -->
-
 
     <div class="container">
 <div class="row">
     <div class="col-sm pt-5">
         <h1 style="font-family: 'Georgia', sans-serif; color: #333333;" class="display-10 text-left pt-4">Thank you for creating an account</h1>
-        <!--<h3 class="display-10">Already a member?</h3>-->
         <br/>
         <h6 style="font-family: 'Arial Regular', 'Arial', sans-serif; color: #333333;" class="display-10 text-left mt-3">Before we begin our journey, we need you to confirm your
     e-mail address.</h6>
@@ -59,7 +16,6 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias dolorum obcaecat
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vero blanditiis dicta dolore quam, provident tempora deserunt debitis! Laudantium reiciendis ut expedita quos illo sit!</h6>
 
 
-    <!--Should I keep-->
         <div>
             @if($errors->any())
             <div class="alert alert-danger">
@@ -70,7 +26,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vero blanditiis d
                 </ul>
             </div><br/>
             @endif
-            <!--Do I need auth?-->
                 @csrf
                
               <br/>
@@ -122,9 +77,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vero blanditiis d
 
 </div>
 
-
-<!--Success messages,
-do I need this?-->
     <div class="col-sm-12">
         @if(session()->get('success'))
         <div class="alert alert-success">

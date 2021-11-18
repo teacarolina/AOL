@@ -18,11 +18,6 @@
         <form method="post" action="{{ route('contacts.update', $contact->id) }}">
             @method('PATCH')
             @csrf
-       <!-- To edit email      
-           <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" name="email" value="{{ $contact->email }}"/>
-            </div> -->
             <div class="form-group">
                 <label for="city">Password</label>
                 <input type="password" class="form-control" name="password" value="{{ $contact->password }}"/>

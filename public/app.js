@@ -26,10 +26,4 @@ function checkPasswordStrength(PasswordParameter) {
 password.addEventListener("input", ()=> {
     clearTimeout(timeout);
     timeout = setTimeout(()=> checkPasswordStrength(password.value), 300);
-    /* Should I use this if statement? */
-    if(password.value.length !== 0) {
-        /*strengthBar.style.display != 'block';*/ 
-    } else {
-       /* strengthBar.style.display = 'none';*/
-    } 
 });
